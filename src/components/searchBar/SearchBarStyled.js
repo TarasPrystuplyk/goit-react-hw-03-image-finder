@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import { ReactComponent as Icon } from '../../searchimage/search.svg';
+
+
+export const StyledIcon = styled(Icon)`
+  width: 24px;
+  height: 24px;
+  fill: #3f51b5;
+`;
+
 
 export const SearchBar = styled.header`
   top: 0;
@@ -19,7 +28,7 @@ export const SearchBar = styled.header`
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 
-export const SerchForm = styled.form`
+export const SearchForm = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
@@ -55,9 +64,14 @@ export const SearchBtn = styled.button`
   }
 `;
 
-export const SerchFormBtnLabel = styled.span`
+export const SearchFormBtnLabel = styled.span`
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 12px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  position: absolute;
 `;

@@ -5,11 +5,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
 import {
   SearchBar,
-  SerchForm,
+  SearchForm,
   Input,
   SearchBtn,
-  SerchFormBtnLabel,
-} from './SerchBar.styled';
+  StyledIcon,
+  SearchFormBtnLabel,
+} from './SearchBarStyled';
 export default class SearhBar extends Component {
   state = {
     searchQuery: '',
@@ -30,7 +31,11 @@ export default class SearhBar extends Component {
   render() {
     return (
       <SearchBar>
-        <SerchForm onSubmit={this.handleSubmit}>
+        <SearchForm onSubmit={this.handleSubmit}>
+        <SearchBtn type="submit">
+          <StyledIcon />
+            <SearchFormBtnLabel>Search</SearchFormBtnLabel>
+          </SearchBtn>
           <Input
             type="text"
             autoComplete="off"
@@ -40,10 +45,8 @@ export default class SearhBar extends Component {
             value={this.state.searchQuery}
             onChange={this.handleChange}
           />
-          <SearchBtn type="submit">
-            <SerchFormBtnLabel>Search</SerchFormBtnLabel>
-          </SearchBtn>
-        </SerchForm>
+          
+        </SearchForm>
       </SearchBar>
     );
   }

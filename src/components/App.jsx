@@ -7,9 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import SearhBar from './searchBar/Searchbar';
 import ImageGallery from './imageGallery/ImageGallery';
+import LoadMoreButton from './button/Button';
 import { AppContainer } from './Appstyled';
 import fetchApi from '../components/service/ApiService';
-import LoadMoreButton from './button/Button';
 import Spiner from './loader/Loader';
 import Modal from './modal/Modal';
 
